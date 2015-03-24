@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" ><!-- 这里指定了我现在要画的是一个矩形 -->
+
+    <stroke
+        android:width="1dip"
+        android:color="#ff333333" /><!-- 这个就是一个画笔啦，现在指定了画笔的大小，还有颜色 -->
+
+    <corners android:radius="12dip" /><!-- 现在这里指定我这个矩形是圆角的，12是那个圆角的值 -->
+
+    <solid android:color="#fff7b2d8" /><!-- 边框颜色 -->
+
+    <padding
+        android:bottom="2dip"
+        android:left="8dip"
+        android:right="8dip"
+        android:top="2dip" /><!-- 这个是内距 -->
+
+</shape>
