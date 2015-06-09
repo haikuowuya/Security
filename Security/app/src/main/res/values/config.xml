@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="serverUrl">http://192.168.1.102/projects/security/update.xml</string>
+    <string name="serverdb">http://10.6.179.14:8090/Security/data.db</string>
+
+</resources>
