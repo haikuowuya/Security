@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dip"
+    android:background="@drawable/item_background_selector">
+    
+    <ImageView 
+        android:id="@+id/iv_cache_icon"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/app"
+        android:contentDescription="@string/hello_world"/>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="65dip"
+	    android:layout_marginLeft="10dip"
+	    android:layout_toRightOf="@id/iv_cache_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        
+	    <TextView 
+	        android:id="@+id/tv_cache_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/hello_world"
+	        android:textSize="18sp"
+	        android:textColor="#ff000000"/>
+        
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="65dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:orientation="vertical"
+        android:gravity="center_vertical|left">
+        
+        <TextView 
+            android:id="@+id/tv_cache_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dataSize"/>
+        
+        <TextView 
+            android:id="@+id/tv_cache_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:text="@string/dataSize"/>
+        
+        <TextView 
+            android:id="@+id/tv_cache_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:text="@string/dataSize"/>
+        
+    </LinearLayout>
+    
+</RelativeLayout>

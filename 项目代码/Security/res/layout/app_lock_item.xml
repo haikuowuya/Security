@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dip"
+    android:background="@drawable/item_background_selector">
+    
+    <ImageView 
+        android:id="@+id/iv_app_lock_icon"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/app"
+        android:contentDescription="@string/hello_world"/>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="65dip"
+	    android:layout_marginLeft="10dip"
+	    android:layout_toRightOf="@id/iv_app_lock_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        
+	    <TextView 
+	        android:id="@+id/tv_app_lock_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/hello_world"
+	        android:textSize="18sp"
+	        android:textColor="#ff000000"/>
+        
+    </LinearLayout>
+    
+    
+    <ImageView 
+        android:id="@+id/iv_app_lock"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="12dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/unlock"
+        android:contentDescription="@string/hello_world"/>
+    
+</RelativeLayout>

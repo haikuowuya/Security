@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.security"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+    
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <!-- 这个是用模拟器进行测试才需要用到的权限，表示是这个模拟的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="com.security.MyApplication" >
+        
+        <activity
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:name="com.security.ui.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:label="@string/main"
+            android:name="com.security.ui.MainActivity" />
+        <activity 
+            android:label="@string/protecte"
+            android:name="com.security.ui.LostProtectedActivity"></activity>
+        <activity 
+            android:label="@string/setupGuide"
+            android:name="com.security.ui.SetupGuide1Activity"></activity>
+        
+        <activity 
+            android:label="@string/setupGuide"
+            android:name="com.security.ui.SetupGuide2Activity"></activity>
+        
+        <activity 
+            android:label="@string/setupGuide"
+            android:name="com.security.ui.SetupGuide3Activity"></activity>
+        
+        <activity 
+            android:label="@string/setupGuide"
+            android:name="com.security.ui.SetupGuide4Activity"></activity>
+        
+        <activity 
+            android:label="@string/selectContact"
+            android:name="com.security.ui.SelectContactActivity"></activity>
+        
+        <activity 
+            android:label="@string/atool"
+            android:name="com.security.ui.AToolActivity"></activity>
+        
+        <activity 
+            android:label="@string/queryNumber"
+            android:name="com.security.ui.QueryNumberActivity"></activity>
+        
+        <activity 
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.security.ui.DragViewActivity" ></activity>
+        
+        <activity 
+            android:label="@string/numberSecurity"
+            android:name="com.security.ui.NumberSecurityActivity"></activity>
+        
+        <activity 
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:name="com.security.ui.AppManagerActivity"></activity>
+        
+        <activity 
+            android:label="@string/app_lock"
+            android:name="com.security.ui.AppLockActivity"></activity>
+        
+        <activity 
+            android:label="@string/lock"
+            android:name="com.security.ui.LockActivity"
+            android:launchMode="singleInstance"></activity>
+        
+        <activity 
+            android:label="@string/setting"
+            android:name="com.security.ui.SettingActivity"></activity>
+        
+        <activity 
+            android:theme="@style/MyTitleBar"
+            android:label="@string/process_manager"
+            android:name="com.security.ui.ProcessManagerActivity"></activity>
+        
+        <activity 
+            android:theme="@style/NoTitleDialog"
+            android:name="com.security.ui.AppDetialActivity"></activity>
+        
+        <activity 
+            android:label="@string/process_setting"
+            android:name="com.security.ui.ProcessSettingActivity"></activity>y
+            
+        <activity 
+            android:label="@string/commonNumber"
+            android:name="com.security.ui.CommonNumberActivity"></activity>
+        
+        <activity 
+            android:label="@string/optimize"
+            android:name="com.security.ui.OptimizeActivity"></activity>
+        
+        <activity 
+            android:label="@string/traffic_manager"
+            android:name="com.security.ui.TrafficManagerActivity"></activity>
+        
+        <activity 
+            android:label="@string/cache_clear"
+            android:name="com.security.ui.CacheClearActivity"></activity>
+        
+        <receiver 
+            android:name="com.security.receiver.CallPhoneReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            </intent-filter>
+        </receiver>
+        
+        <receiver 
+            android:name="com.security.receiver.BootCompleteReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/><!-- 这个是开机完成后的广播 -->
+            </intent-filter>
+        </receiver>
+        
+        <receiver 
+            android:name="com.security.receiver.SmsReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver 
+            android:name="com.security.receiver.MyAdminReceiver">
+		    <meta-data android:name="android.app.device_admin"
+		            android:resource="@xml/myadmin" />
+		    <intent-filter>
+		        <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+		    </intent-filter>
+		</receiver>
+		
+        <receiver 
+            android:name="com.security.receiver.LockScreenReceive">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+            </intent-filter>
+        </receiver>
+        
+        <receiver 
+            android:name="com.security.receiver.ProcessWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data 
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_info"/>
+        </receiver>
+        
+        <receiver 
+            android:name="com.security.receiver.ProcessClearReceiver"></receiver>
+        
+        <service 
+            android:name="com.security.service.AddressService"></service>
+        
+        <service 
+            android:name="com.security.service.BackupSmsService"></service>
+        
+        <service 
+            android:name="com.security.service.WatchDogService"></service>
+        
+        <service 
+            android:name="com.security.service.UpdateWidgetService"></service>
+        
+        <provider 
+            android:name="com.security.provider.AppLockProvider"
+            android:authorities="com.security.applockprovider"
+            android:exported="false"></provider>
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/title_background"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/setting"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip">
+        
+        <LinearLayout 
+            android:layout_width="280dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical">
+            
+            <TextView 
+                android:layout_width="280dip"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="@string/lock_service"/>
+            
+            <TextView 
+                android:id="@+id/tv_lock_tips"
+                android:layout_width="280dip"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#ffff0000"
+                android:text="@string/lock_tips"/>
+            
+        </LinearLayout>
+        
+        <CheckBox 
+            android:id="@+id/cb_lock_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:checked="false"/>
+        
+    </RelativeLayout>
+    
+</LinearLayout>

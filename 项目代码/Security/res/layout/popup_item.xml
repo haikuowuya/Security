@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_app_popup"
+    android:layout_width="180dip"
+    android:layout_height="50dip"
+    android:background="@drawable/local_popup_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+    
+    <LinearLayout
+        android:id="@+id/ll_app_uninstall"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_marginLeft="8dip"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/img1"
+            android:contentDescription="@string/hello_world" />
+
+        <TextView
+            android:layout_width="30dip"
+            android:layout_height="20dip"
+            android:text="@string/app_manager_delete" />
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="40dip"
+        android:background="#ff1224ff" />
+
+    <LinearLayout
+        android:id="@+id/ll_app_start"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/img2"
+            android:contentDescription="@string/hello_world" />
+
+        <TextView
+            android:layout_width="30dip"
+            android:layout_height="20dip"
+            android:text="@string/app_manager_run" />
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dip"
+        android:layout_height="40dip"
+        android:background="#ff1224ff" />
+
+    <LinearLayout
+        android:id="@+id/ll_app_share"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/img3"
+            android:contentDescription="@string/hello_world" />
+
+        <TextView
+            android:layout_width="30dip"
+            android:layout_height="20dip"
+            android:text="@string/app_manager_share"/>
+        
+    </LinearLayout>
+
+</LinearLayout>
